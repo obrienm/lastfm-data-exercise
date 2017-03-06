@@ -1,0 +1,6 @@
+-J-XX:MaxRAMFraction=4
+-J-Xss16m
+-J-XX:+UseConcMarkSweepGC
+-J-XX:+CMSClassUnloadingEnabled
+-J-XX:MaxMetaspaceSize=1g
+
