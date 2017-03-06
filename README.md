@@ -27,7 +27,7 @@ sbt "runMain me.mobrien.lastfm.LongestSessions"
 Or you can just run the tests:
 
 ```shell
-sbt testOnly me.mobrien.lastfm.UserIdsWithDistinctSongCountsTest
-sbt testOnly me.mobrien.lastfm.MostPopularSongsTest
-sbt testOnly me.mobrien.lastfm.LongestSessions
+sbt "testOnly me.mobrien.lastfm.UserIdsWithDistinctSongCountsTest"
+sbt "testOnly me.mobrien.lastfm.MostPopularSongsTest"
+sbt "testOnly me.mobrien.lastfm.LongestSessions"
 ```
