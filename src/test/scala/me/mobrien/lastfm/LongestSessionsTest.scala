@@ -4,7 +4,7 @@ import org.scalatest._
 
 class LongestSessionsTest extends FlatSpec with Matchers {
 
-  it should "calculate the number of distinct songs played for each user" in {
+  it should "calculate the longest sessions" in {
     val results = LongestSessions.query()
     results.size shouldEqual 39542
     val sessions = results.groupBy(r => r.syntheticSessionId)
