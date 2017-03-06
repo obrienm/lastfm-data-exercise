@@ -52,7 +52,7 @@ object LongestSessions extends App with SparkRunner with LastFMDataReader with L
 
     val queryResults = tenLongestSessions.
       join(completeTableWithSessionIds, "synthetic-session-id")
-      .orderBy("session-duration-seconds")
+      .orderBy("session-duration-seconds", "timestamp")
       .select("userid", "first-song-start", "last-song-start", "track-name", "synthetic-session-id")
 
     import sparkSession.implicits._
