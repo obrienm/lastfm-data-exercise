@@ -2,7 +2,7 @@ package me.mobrien.lastfm
 
 import org.scalatest._
 
-class UserIdsWithDistinctSongCountsTest extends FlatSpec with Matchers {
+class UserIdsWithSongCountsTest extends FlatSpec with Matchers {
 
   it should "calculate the number of distinct songs played for each user" in {
     val results = UserIdsWithDistinctSongCounts.query()

@@ -24,7 +24,7 @@ object UserIdsWithDistinctSongCounts extends App with SparkRunner with LastFMDat
 
     val queryResults = dataFrame
       .groupBy("userid")
-      .agg(countDistinct("track-name").alias("count"))
+      .agg(countDistinct("track-name", "artist-name").alias("count"))
       .orderBy(col("count").desc)
 
     import sparkSession.implicits._
